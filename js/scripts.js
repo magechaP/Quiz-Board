@@ -39,3 +39,20 @@ $ ("Question9") .change(function(){
 $ ("Question10") .change(function(){
      ans10= $(this).val();
 };
+//this is the marking scheme
+var answers = ['HTML', 'Js', 'var', '"  "', 'Arrays', 'JavaScript library', 'non-repetitive code', 'prepend', 'four', 'yes'];
+//these are answers submitted by the user
+var forStudent = [];
+//this is the final result of the user
+var result = [];
+
+//marking process;for correct answers logic
+var count =0;
+var find = (() => {
+  forStudent.push(ans1, ans2, ans3, ans4, ans5, ans6, ans7, ans8, ans9, ans10);
+  console.log(forStudent);
+  for(var a = 0; a < answers.length ; a++){
+    for(var b = 0; b <forStudent.length ; b++){
+      if(answers[a] === forStudent[b])
+    }
+  }

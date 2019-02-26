@@ -54,5 +54,37 @@ var find = (() => {
   for(var a = 0; a < answers.length ; a++){
     for(var b = 0; b <forStudent.length ; b++){
       if(answers[a] === forStudent[b])
+      {
+        count = count+1
+        console.log(" correct "+ forStudent[b] +" score " + count + " out of 10 ");
+  for(var a = 0; a < answers.length; a++){
+    for(var b = 0; b <forStudent.length; b++){
+      if(answers[a] === forStudent[b])
+      {
+        count = count+1
+        console.log("statusupdate")[0].textContent = "you got the following answers correct";
+        var correctionList = document.getElementByClassName("correctList")[0];
+        correctionsList.innerHTML += "<li>"+forStudent[b]+"</li>";
+        calculate(count);
+      }
+      else
+      {
+        //no function runs in this section
+      }
+      }
     }
   }
+});
+//calculation of percentage markings
+var calculate = ((number) =>{
+  var divide = number / 10;
+  var final = divide * 100;
+  result.push(final);
+});
+
+//reloading the page and clearing to intialize empty answer sheet
+var clear =(() => {
+  setTimeout(function(){
+    location.reload();
+  },09000);
+});

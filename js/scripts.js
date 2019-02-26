@@ -88,3 +88,33 @@ var clear =(() => {
     location.reload();
   },09000);
 });
+//everything below this is front-end user interface
+
+$(document).ready(function(){
+  //interactive buttons
+  $(".btnSubmit").on("click",function(){
+    find();
+    if(result[result.length-1] === undefined)
+    {
+      alert("0% ni kidogo sana,rudia");
+    }
+    else
+    {
+      //getting the marks by calculation
+      var anscheck = parseInt(result[result.length - 1]);
+      if(anscheck < 50)
+      {
+        alert(anscheck + "%" + "ni fair mark,though bado umedunda,rudia.");
+      }
+      else if(anscheck > 50 && anscheck < 80)
+      {
+        alert(anscheck + "%" + "ni marks poa,umejaribu.")
+      }
+      else if(anscheck > 80)
+      {
+        alert(anscheck + "%" + "ni marks excellent,toka shule.")
+      }
+    }
+    clear()  
+  });
+});

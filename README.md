@@ -2,7 +2,7 @@
 
 Quiz-Board is a website containing the quiz-hour test which is taken and subsequent results given after the test
 
-# Programmig tools used
+# Programming tools used
 
 JavaScript,HTML,CSS
 

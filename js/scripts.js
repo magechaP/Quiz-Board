@@ -40,7 +40,7 @@ $("#Question10") .change(function(){
      ans10= $(this).val();
 });
 //this is the marking scheme
-var answers = ['HTML', 'Js', 'var', '"  "', 'Arrays', 'JavaScript library', 'non-repetitive code', 'prepend', 'four', 'yes'];
+var answers = ['HTML', 'Js', 'var', 'double quotes', 'Arrays', 'JavaScript library', 'non-repetitive code', 'prepend()', 'four', 'yes'];
 //these are answers submitted by the user
 var forStudent = [];
 //this is the final result of the user
@@ -57,9 +57,6 @@ var find = (() => {
       {
         count = count+1
         console.log("correct" + forStudent[b] + count + "out of 10");
-        document.getElementByClassName("statusupdate")[0].textContent = "you got the following answers correct;";
-        var correctionList = document.getElementsByClassName("correctList")[0];
-        correctList.innerHTML += "<li>" +forStudent[b] + "</li>";
         calculate(count);
       }
       else
@@ -75,19 +72,13 @@ var calculate = ((number) =>{
   var final = divide * 100;
   result.push(final);
 });
-
-//reloading the page and clearing to intialize empty answer sheet
-var clear =(() => {
-  setTimeout(function(){
-    location.reload();
-  },09000);
-});
 //everything below this is front-end user interface
 
 $(document).ready(function(){
   //interactive buttons
   $(".btnSubmit").on("click",function(){
     find();
+    $(this).hide();
     if(result[result.length-1] === undefined)
     {
       alert("0% ni kidogo sana,rudia");
@@ -100,15 +91,14 @@ $(document).ready(function(){
       {
         alert(anscheck + "%" + "ni fair mark,though bado umedunda,rudia.");
       }
-      else if(anscheck > 50 && anscheck < 80)
+      else if(anscheck > 50 || anscheck === 50 && anscheck < 80)
       {
-        alert(anscheck + "%" + "ni marks poa,umejaribu.")
+        alert(anscheck + "%" + "ni marks poa,umejaribu.");
       }
-      else if(anscheck > 80)
+      else if(anscheck > 80 && anscheck === 80)
       {
-        alert(anscheck + "%" + "ni marks excellent,toka shule.")
+        alert(anscheck + "%" + "ni marks excellent,toka shule.");
       }
     }
-    clear()
   });
 });

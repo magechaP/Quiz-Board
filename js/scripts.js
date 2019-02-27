@@ -40,7 +40,7 @@ $("#Question10") .change(function(){
      ans10= $(this).val();
 });
 //this is the marking scheme
-var answers = ['HTML', 'Js', 'var', 'double quotes', 'Arrays', 'JavaScript library', 'non-repetitive code', 'prepend()', 'four', 'yes'];
+var answers = ['HTML', 'JS', 'Var', 'double quotes', 'Arrays', 'JavaScript library', 'non-repetitive code', 'prepend()', 'four', 'yes'];
 //these are answers submitted by the user
 var forStudent = [];
 //this is the final result of the user
@@ -95,7 +95,7 @@ $(document).ready(function(){
       {
         alert(anscheck + "%" + "ni marks poa,umejaribu.");
       }
-      else if(anscheck > 80)
+      else if(anscheck > 80 || anscheck === 80)
       {
         alert(anscheck + "%" + "ni marks excellent,toka shule.");
       }

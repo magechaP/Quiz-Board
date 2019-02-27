@@ -9,36 +9,36 @@ var  ans8;
 var  ans9;
 var  ans10;
 
-$ ("Question1") .change(function(){
-     ans1= $(this).val();
-};
-$ ("Question2") .change(function(){
+$("#Question1").change(function(){
+     ans1=$(this).val();
+});
+$("#Question2") .change(function(){
      ans2= $(this).val();
-};
-$ ("Question3") .change(function(){
+});
+$("#Question3") .change(function(){
      ans3= $(this).val();
-};
-$ ("Question4") .change(function(){
+});
+$("#Question4") .change(function(){
      ans4= $(this).val();
-};
-$ ("Question5") .change(function(){
+});
+$("#Question5") .change(function(){
      ans5= $(this).val();
-};
-$ ("Question6") .change(function(){
+});
+$("#Question6") .change(function(){
      ans6= $(this).val();
-};
-$ ("Question7") .change(function(){
+});
+$("#Question7") .change(function(){
      ans7= $(this).val();
-};
-$ ("Question8") .change(function(){
+});
+$("#Question8") .change(function(){
      ans8= $(this).val();
-};
-$ ("Question9") .change(function(){
+});
+$("#Question9") .change(function(){
      ans9= $(this).val();
-};
-$ ("Question10") .change(function(){
+});
+$("#Question10") .change(function(){
      ans10= $(this).val();
-};
+});
 //this is the marking scheme
 var answers = ['HTML', 'Js', 'var', '"  "', 'Arrays', 'JavaScript library', 'non-repetitive code', 'prepend', 'four', 'yes'];
 //these are answers submitted by the user
@@ -68,7 +68,6 @@ var find = (() => {
       }
      }
    }
-    }
 });
 //calculation of percentage markings
 var calculate = ((number) =>{

@@ -95,7 +95,7 @@ $(document).ready(function(){
       {
         alert(anscheck + "%" + "ni marks poa,umejaribu.");
       }
-      else if(anscheck > 80 && anscheck === 80)
+      else if(anscheck > 80)
       {
         alert(anscheck + "%" + "ni marks excellent,toka shule.");
       }
